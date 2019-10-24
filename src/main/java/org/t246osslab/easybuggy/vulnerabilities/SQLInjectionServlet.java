@@ -68,11 +68,11 @@ public class SQLInjectionServlet extends AbstractServlet {
             conn = DBClient.getConnection();
 
             /*vulnerable code*/
-            /*
+            
             stmt = conn.createStatement();
             rs = stmt.executeQuery("SELECT name, secret FROM users WHERE ispublic = 'true' AND name='" + name
                     + "' AND password='" + password + "'");
-            */
+            
 
             /*SQL remediation code here*/
 
