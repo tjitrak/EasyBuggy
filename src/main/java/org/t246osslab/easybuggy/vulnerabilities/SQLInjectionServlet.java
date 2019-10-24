@@ -15,7 +15,7 @@ import org.apache.commons.lang.StringUtils;
 import org.t246osslab.easybuggy.core.dao.DBClient;
 import org.t246osslab.easybuggy.core.servlets.AbstractServlet;
 import org.t246osslab.easybuggy.core.utils.Closer;
-import java.sql.PreparedStatement;
+/*import java.sql.PreparedStatement;*/
 
 @SuppressWarnings("serial")
 @WebServlet(urlPatterns = { "/sqlijc" })
