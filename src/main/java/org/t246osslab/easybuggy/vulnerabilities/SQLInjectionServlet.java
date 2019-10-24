@@ -5,7 +5,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Locale;
-import java.sql.PreparedStatement;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -74,12 +73,6 @@ public class SQLInjectionServlet extends AbstractServlet {
                     + "' AND password='" + password + "'");
             
             /*SQL remediation code here*/
-
-            String selectSQL = "SELECT name, secret FROM users WHERE ispublic = 'true' AND name = ? AND password = ?";
-            PreparedStatement preparedStatement = conn.prepareStatement(selectSQL);
-            preparedStatement.setString(1, name);
-            preparedStatement.setString(2, password);
-            rs = preparedStatement.executeQuery();
             
             StringBuilder sb = new StringBuilder();
             while (rs.next()) {
